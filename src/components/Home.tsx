@@ -1,38 +1,25 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+import Square from './common/Square';
 
-const Home = () => {
-  return (
-    <div className="grid-container mt-16">
-      {/* Cuadrado 1 */}
-      <div className="grid-item">
-        <p className="text-black">Cuadrado 1</p>
+const Home: React.FC = () => {
+    return (
+      <div>
+        <h1>Bienvenido a la tienda de computadoras</h1>
+        <Link to="/producto1">
+          <Square imagePath="path/to/computer1.jpg" destination="/producto1" />
+        </Link>
+        <Link to="/producto2">
+          <Square imagePath="path/to/computer2.jpg" destination="/producto2" />
+        </Link>
+        <Link to="/producto3">
+          <Square imagePath="path/to/computer3.jpg" destination="/producto3" />
+        </Link>
+        <Link to="/producto4">
+          <Square imagePath="path/to/computer4.jpg" destination="/producto4" />
+        </Link>
       </div>
-
-      {/* Línea vertical */}
-      <div className="bg-gray-600 h-200px w-2"></div>
-
-      {/* Cuadrado 2 */}
-      <div className="grid-item">
-        <p className="text-black">Cuadrado 2</p>
-      </div>
-
-      {/* Línea vertical */}
-      <div className="bg-gray-600 h-200px w-2"></div>
-
-      {/* Cuadrado 3 */}
-      <div className="grid-item">
-        <p className="text-black">Cuadrado 3</p>
-      </div>
-
-      {/* Línea vertical */}
-      <div className="bg-gray-600 h-200px w-2"></div>
-
-      {/* Cuadrado 4 */}
-      <div className="grid-item">
-        <p className="text-black">Cuadrado 4</p>
-      </div>
-    </div>
-  )
-}
-
-export default Home
+    );
+  };
+  
+  export default Home;
