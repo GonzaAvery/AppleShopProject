@@ -1,19 +1,16 @@
 import React from 'react';
 
 interface SquareProps {
-  imagePath: string;
-  destination: string;
+  value: string;
 }
 
-const Square: React.FC<SquareProps> = ({ imagePath, destination }) => {
-  const handleClick = () => {
-    // Puedes agregar lógica adicional al manejo de clics si es necesario.
-  };
-
+const Square: React.FC<SquareProps> = ({ value }) => {
   return (
-    <button className="bg-blue-500 p-4 m-2" onClick={handleClick}>
-      <img src={imagePath} alt="Computer" className="w-full h-auto" />
-    </button>
+    <div className="w-full md:w-1/2">
+      <div className="w-full h-full border border-black flex items-center justify-center">
+        {value}
+      </div>
+    </div>
   );
 };
 
