@@ -1,16 +1,16 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React from 'react';
 import Square from './common/Square';
+import MacbookPro from '../assets/MacbookPro.jpg';
 
 const Home: React.FC = () => {
   return (
     <div className="flex flex-wrap mt-16">
-      <Square value="1" />
-      <Square value="2" />
-      <Square value="3" />
-      <Square value="4" />
+      <Square value={MacbookPro} />
+      <Square value={MacbookPro} />
+      <Square value={MacbookPro} />
+      <Square value={MacbookPro} />
     </div>
   );
 };
-  
-  export default Home;
+
+export default Home;
